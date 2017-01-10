@@ -1,0 +1,12 @@
+#! /bin/bash
+#По сути можно сделать скрипт rc1torc4 с содержимим:
+rm -rf /etc/rc.d/rc4.d/* &&
+cp -R /etc/rc.d/rc1.d/* /etc/rc.d/rc4.d/ &&
+cd /etc/rc.d/rc4.d/
+mv S99single K01single &&
+mv K90network S10network &&
+mv K25sshd S75sshd
+
+#и все.
+#Хеш: 7725b24
+
