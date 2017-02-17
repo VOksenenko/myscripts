@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+if [ "$1" == "-u" ]
+then
+    #uncomment lines  $2 - $3 in file $4
+    sed -i "$2,$3s/#//" $4
+else
+    #comment lines  $1 - $2 in file $3
+    sed -i "$1,$2s/^/#/" $3
+fi
